@@ -1,0 +1,27 @@
+.login-box{
+    animation:login-box;
+    animation-duration: 4s;
+}
+@keyframes login-box{
+    from{
+        transform: translateY(110%);
+    }
+}
+.signup-box{
+    animation:signup-box;
+    animation-duration: 4s;
+}
+@keyframes signup-box{
+    from{
+        transform: translateY(110%);
+    }
+}
+.reset-box{
+    animation:reset-box;
+    animation-duration: 4s;
+}
+@keyframes reset-box{
+    from{
+        transform: translateY(110%);
+    }
+}
