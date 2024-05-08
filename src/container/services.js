@@ -1,8 +1,6 @@
 import axios from "axios";
 import { config } from "../config";
 
-let token=localStorage.getItem("token")
-
 //Login function
 async function handlelogin(user) {
     try {
@@ -25,7 +23,7 @@ async function handlesignUp(user) {
     }
 }
 //fetch user data function
-async function fetchData() {
+async function fetchData(token) {
   try {
     let response = await axios.get(`${config.backendurl}/auth/get-user-data`, {
       headers: {

@@ -27,7 +27,7 @@ const Login = () => {
 
   async function handleLogin(user) {
     setLoading(1);
-    let response = handlelogin(user)
+    let response = await handlelogin(user)
     if(response){
       navigate("/");
     } else {
