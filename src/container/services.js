@@ -1,6 +1,8 @@
 import axios from "axios";
 import { config } from "../config";
 
+let token=localStorage.getItem("token")
+
 //Login function
 async function handlelogin(user) {
     try {
@@ -22,5 +24,18 @@ async function handlesignUp(user) {
       return false;
     }
 }
+//fetch user data function
+async function fetchData() {
+  try {
+    let response = await axios.get(`${config.backendurl}/auth/get-user-data`, {
+      headers: {
+        "x-auth": token,
+      },
+    });
+    return response.data;
+  } catch {
+    alert("Invalid Credentials");
+  }
+}
 
-export {handlelogin,handlesignUp}
+export {handlelogin,handlesignUp,fetchData}
