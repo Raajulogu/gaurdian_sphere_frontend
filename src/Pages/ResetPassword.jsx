@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import * as yup from "yup";
 import { useFormik } from "formik";
@@ -22,7 +23,7 @@ const ResetPassword = () => {
       <div className="row h-[100%]">
         <div className="col h-[100vh] w-[100vw] flex justify-center items-center">
           {value === false ? (
-            <Email value={value} setValue={setValue} />
+            <Email setValue={setValue} />
           ) : (
             <NewPassword />
           )}
@@ -33,7 +34,7 @@ const ResetPassword = () => {
 };
 
 //Component for Send OTP
-const Email = ({ value, setValue }) => {
+const Email = ({ setValue }) => {
   let [encrypt, setEncrypt] = useState("");
   let [otp, setOtp] = useState("");
   let [emailId, setEmailId] = useState("");

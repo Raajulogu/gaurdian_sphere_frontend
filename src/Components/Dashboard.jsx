@@ -1,3 +1,4 @@
+/* eslint-disable no-inner-declarations */
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { fetchData } from '../container/services';
@@ -7,7 +8,6 @@ const Dashboard = () => {
   const navigate=useNavigate();
   let token=localStorage.getItem("token")
   useEffect(()=>{
-    let token=localStorage.getItem('token');
     if(!token){
       navigate('/login')
     }
