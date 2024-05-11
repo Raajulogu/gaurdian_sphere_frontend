@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 export const config={
     backendurl:process.env.REACT_APP_backend_URL,
     logo:process.env.REACT_APP_logo,
