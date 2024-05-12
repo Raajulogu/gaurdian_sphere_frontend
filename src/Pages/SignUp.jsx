@@ -42,7 +42,7 @@ const SignUp = () => {
 
   async function handleSignUp(user) {
     setLoading(1);
-    let response =await handlesignUp(user);
+    let response = await handlesignUp(user);
     if (response) {
       navigate("/");
     } else {

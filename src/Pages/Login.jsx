@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import '../animation.css'
+import "../animation.css";
 import { handlelogin } from "../container/services";
 
 //Validation Schema
@@ -28,8 +28,8 @@ const Login = () => {
 
   async function handleLogin(user) {
     setLoading(1);
-    let response = await handlelogin(user)
-    if(response){
+    let response = await handlelogin(user);
+    if (response) {
       navigate("/");
     } else {
       alert("Invalid Credentials");
@@ -37,11 +37,17 @@ const Login = () => {
     setLoading(false);
   }
   return (
-    <div className={`flex items-center justify-center h-[100vh] w-[100vw] bg-transparent bg-cover`} style={{backgroundImage:`url(https://shorturl.at/mpU59)`}}>
+    <div
+      className={`flex items-center justify-center h-[100vh] w-[100vw] bg-transparent bg-cover`}
+      style={{ backgroundImage: `url(https://shorturl.at/mpU59)` }}
+    >
       <div className="flex flex-col items-center min-w-[35%] min-h-[40%] bg-[#FDBA44] bg-cover py-[10px] rounded-[5px] shadow-[5px_5px_5px_5px_black] login-box">
         <h1>LogIn</h1>
         <br />
-        <form onSubmit={handleSubmit} className="flex flex-col w-[80%] mx-[20px]">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col w-[80%] mx-[20px]"
+        >
           <TextField
             name="email"
             type="email"

@@ -1,0 +1,255 @@
+{
+  "Questions": [
+    {
+      "Question": "What should you do after clicking the emergency alert button?",
+      "Answer": "After clicking the emergency alert button, stay calm and await further instructions. The app will notify your designated contacts and authorities about your emergency situation. If possible, try to find a safe location and wait for help to arrive."
+    },
+    {
+      "Question": "How can you prevent yourself from potential dangers?",
+      "Answer": "To prevent yourself from potential dangers, consider taking the following precautions:\n\n1. Trust your instincts and avoid situations or individuals that make you feel uncomfortable.\n2. Stay aware of your surroundings and avoid isolated or poorly lit areas, especially at night.\n3. Practice assertive communication and set clear boundaries with others.\n4. Stay connected with trusted friends or family members and share your location with them when necessary.\n5. Educate yourself about self-defense techniques and consider taking a self-defense class.\n6. Trust your intuition and don't hesitate to seek help or remove yourself from a risky situation."
+    },
+    {
+      "Question": "What steps can you take if you witness someone experiencing harassment or assault?",
+      "Answer": "If you witness someone experiencing harassment or assault, consider the following steps:\n\n1. Assess the situation and prioritize safety for yourself and others.\n2. Intervene if it's safe to do so by calmly and assertively addressing the situation or seeking help from others nearby.\n3. Offer support and assistance to the victim, such as providing a safe space or contacting authorities.\n4. Document the incident if possible by taking notes or recording details to assist with reporting.\n5. Encourage the victim to seek help and support from trusted resources, such as hotlines or support groups.\n6. Follow up with the victim and offer continued support as needed."
+    },
+    {
+      "Question": "How can you recognize signs of potential danger?",
+      "Answer": "Signs of potential danger may include someone making you feel uncomfortable, following you, or behaving aggressively. Trust your instincts and take precautions if you sense any red flags."
+    },
+    {
+      "Question": "What should you do if you feel threatened or unsafe?",
+      "Answer": "If you feel threatened or unsafe, try to remove yourself from the situation as calmly and quickly as possible. Seek help from trusted individuals or authorities, and prioritize your safety above all else."
+    },
+    {
+      "Question": "How can you support a friend or loved one who has experienced harassment or assault?",
+      "Answer": "To support a friend or loved one who has experienced harassment or assault, listen to them without judgment, validate their feelings, and offer your unconditional support. Respect their decisions and encourage them to seek professional help or resources if needed."
+    },
+    {
+      "Question": "What resources are available for reporting incidents of harassment or assault?",
+      "Answer": "There are various resources available for reporting incidents of harassment or assault, including local law enforcement, crisis hotlines, and support organizations. You can also use the Guardian Sphere app to access reporting resources and seek assistance."
+    }
+  ],
+  "SelfDefenseTips": [
+    {
+      "Tip": "Stay aware of your surroundings at all times.",
+      "Description": "Being aware of your surroundings allows you to recognize potential threats and take preemptive action to stay safe."
+    },
+    {
+      "Tip": "Trust your instincts.",
+      "Description": "If something feels off or makes you uncomfortable, trust your intuition and take steps to remove yourself from the situation."
+    },
+    {
+      "Tip": "Maintain confident body language.",
+      "Description": "Confident body language can deter potential attackers. Stand tall, make eye contact, and project confidence in your movements."
+    },
+    {
+      "Tip": "Learn basic self-defense techniques.",
+      "Description": "Take a self-defense class to learn techniques for protecting yourself, such as strikes, kicks, and escape maneuvers."
+    },
+    {
+      "Tip": "Use everyday objects as improvised weapons.",
+      "Description": "In case of an attack, use nearby objects such as keys, pens, or bags to defend yourself or create distance from the attacker."
+    },
+    {
+      "Tip": "Practice assertive communication.",
+      "Description": "Be assertive in setting boundaries and expressing your discomfort. Use clear and direct language to assert yourself in challenging situations."
+    },
+    {
+      "Tip": "Plan escape routes in advance.",
+      "Description": "When in unfamiliar places, identify potential exit routes and safe areas where you can seek refuge in case of emergency."
+    },
+    {
+      "Tip": "Stay physically fit.",
+      "Description": "Maintaining physical fitness improves your overall strength, agility, and ability to defend yourself if needed."
+    }
+  ],
+  "MentalOvercomingTips": [
+    {
+      "Tip": "Seek professional support.",
+      "Description": "Consider speaking with a therapist or counselor who specializes in trauma to process your feelings and develop coping strategies."
+    },
+    {
+      "Tip": "Practice self-care.",
+      "Description": "Engage in activities that promote relaxation and well-being, such as exercise, meditation, spending time with loved ones, and pursuing hobbies."
+    },
+    {
+      "Tip": "Educate yourself about trauma responses.",
+      "Description": "Understanding common reactions to trauma, such as anxiety, depression, and PTSD, can help you feel less alone and more in control of your healing journey."
+    },
+    {
+      "Tip": "Join a support group.",
+      "Description": "Connect with others who have experienced similar challenges by joining a support group or online community. Sharing experiences and receiving support from others can be validating and empowering."
+    },
+    {
+      "Tip": "Set boundaries.",
+      "Description": "Establish clear boundaries with yourself and others to prioritize your emotional well-being. Learn to say no to situations or people that make you feel uncomfortable or unsafe."
+    },
+    {
+      "Tip": "Practice mindfulness.",
+      "Description": "Mindfulness techniques, such as deep breathing, grounding exercises, and body scans, can help you stay present and manage overwhelming emotions."
+    },
+    {
+      "Tip": "Focus on personal growth.",
+      "Description": "Channel your energy into activities that promote personal growth and resilience, such as learning new skills, setting goals, and cultivating a sense of purpose."
+    },
+    {
+      "Tip": "Celebrate progress.",
+      "Description": "Acknowledge and celebrate your progress, no matter how small. Recognize your strength and resilience in overcoming challenges and moving forward."
+    }
+  ],
+  "Laws": {
+    "USA": [
+      {
+        "Law": "Title VII of the Civil Rights Act of 1964",
+        "Punishment": "Civil penalties, including monetary damages, injunctions, and reinstatement of employment."
+      },
+      {
+        "Law": "Violence Against Women Act (VAWA)",
+        "Punishment": "Criminal penalties, including imprisonment, fines, and restraining orders."
+      },
+      {
+        "Law": "Criminal Sexual Conduct Laws",
+        "Punishment": "Varies by state, but may include imprisonment, fines, probation, and registration as a sex offender."
+      },
+      {
+        "Law": "The Clery Act",
+        "Punishment": "Requires colleges and universities to disclose information about campus crime, including sexual assault, and implement prevention programs."
+      },
+      {
+        "Law": "Family Violence Prevention and Services Act (FVPSA)",
+        "Punishment": "Provides funding for shelters, support services, and prevention programs for victims of domestic violence and sexual assault."
+      }
+    ],
+    "UK": [
+      {
+        "Law": "Sexual Offences Act 2003",
+        "Punishment": "Varies depending on the offense, but may include imprisonment, community service, fines, and registration as a sex offender."
+      },
+      {
+        "Law": "Equality Act 2010",
+        "Punishment": "Civil penalties, including compensation for victims, injunctions, and orders to cease discriminatory behavior."
+      },
+      {
+        "Law": "Domestic Violence, Crime and Victims Act 2004",
+        "Punishment": "Provides protection for victims of domestic violence and strengthens laws related to sexual assault and harassment."
+      },
+      {
+        "Law": "Sexual Offences (Scotland) Act 2009",
+        "Punishment": "Criminalizes various forms of sexual assault and harassment and establishes procedures for handling sexual offenses in Scotland."
+      },
+      {
+        "Law": "The Protection from Harassment Act 1997",
+        "Punishment": "Criminalizes harassment and stalking behavior and provides remedies for victims, including restraining orders and civil damages."
+      }
+    ],
+    "India": [
+      {
+        "Law": "The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+        "Punishment": "Varies depending on the severity of the offense, but may include warnings, termination of employment, fines, and compensation for victims."
+      },
+      {
+        "Law": "Indian Penal Code (IPC)",
+        "Punishment": "Varies depending on the offense, but may include imprisonment, fines, and community service."
+      },
+      {
+        "Law": "Protection of Women from Domestic Violence Act, 2005",
+        "Punishment": "Provides legal protection and remedies for women experiencing domestic violence, including sexual assault and harassment."
+      },
+      {
+        "Law": "The Indecent Representation of Women (Prohibition) Act, 1986",
+        "Punishment": "Criminalizes the depiction of women in a derogatory or degrading manner and provides penalties for offenses."
+      },
+      {
+        "Law": "The Criminal Law (Amendment) Act, 2013 (Nirbhaya Act)",
+        "Punishment": "Enacted in response to the 2012 Delhi gang rape case, this law provides stricter penalties for sexual offenses, including rape, and expands definitions of sexual assault."
+      }
+    ]
+  },
+  "Previous_Case": [
+    {
+      "Incident": "Harvey Weinstein Scandal",
+      "Year": 2017,
+      "Description": "The Hollywood producer Harvey Weinstein was accused by multiple women of sexual harassment, assault, and rape. The allegations sparked the #MeToo movement, encouraging survivors to speak out against sexual misconduct.",
+      "Country": "USA"
+    },
+    {
+      "Incident": "Larry Nassar Scandal",
+      "Year": 2018,
+      "Description": "Larry Nassar, a former USA Gymnastics team doctor, was accused of sexually abusing hundreds of young female athletes under the guise of medical treatment. His trial received widespread media attention and led to reforms within USA Gymnastics and the U.S. Olympic Committee.",
+      "Country": "USA"
+    },
+    {
+      "Incident": "Brett Kavanaugh Confirmation Hearings",
+      "Year": 2018,
+      "Description": "During the confirmation hearings for Supreme Court Justice Brett Kavanaugh, Dr. Christine Blasey Ford accused him of sexually assaulting her when they were teenagers. The hearings sparked a national debate and highlighted issues of sexual assault and gender dynamics.",
+      "Country": "USA"
+    },
+    {
+      "Incident": "Bill Cosby Trial",
+      "Year": 2018,
+      "Description": "Comedian and actor Bill Cosby was convicted of three counts of aggravated indecent assault for drugging and sexually assaulting Andrea Constand in 2004. The trial marked a significant moment in the #MeToo movement and represented a high-profile conviction of a powerful figure.",
+      "Country": "USA"
+    },
+    {
+      "Incident": "Dominique Strauss-Kahn Scandal",
+      "Year": 2011,
+      "Description": "Dominique Strauss-Kahn, the former managing director of the International Monetary Fund (IMF), was accused of sexually assaulting a hotel maid in New York City. The case garnered international attention and raised questions about the behavior of powerful individuals in positions of authority.",
+      "Country": "USA"
+    },
+    {
+      "Incident": "Nirbhaya Gang Rape Case",
+      "Year": 2012,
+      "Description": "A brutal gang rape and murder of a young woman occurred in Delhi, sparking widespread outrage and protests across India. The incident highlighted issues of gender-based violence and led to calls for legal reforms and greater protections for women.",
+      "Country": "India"
+    },
+    {
+      "Incident": "Tarun Tejpal Sexual Assault Case",
+      "Year": 2013,
+      "Description": "Tarun Tejpal, the founder of Tehelka magazine, was accused of sexually assaulting a female colleague during an event in Goa. The case drew significant media attention and raised questions about workplace harassment and abuse of power.",
+      "Country": "India"
+    },
+    {
+      "Incident": "Chinmayanand Rape Case",
+      "Year": 2019,
+      "Description": "Former BJP leader Swami Chinmayanand was accused of raping a law student in Uttar Pradesh. The case highlighted issues of sexual exploitation and abuse of authority within religious and educational institutions.",
+      "Country": "India"
+    }
+  ],
+  "DoctorsHelpline": [
+    {
+      "Organization": "Indian Medical Association (IMA) Helpline",
+      "Number": "011-2658 8500"
+    },
+    {
+      "Organization": "Doctors Without Borders (MSF) India Helpline",
+      "Number": "+91-11-4225 5000"
+    },
+    {
+      "Organization": "National Doctors' Day Helpline",
+      "Number": "1800-200-3855"
+    }
+  ],
+  "WomensSafetyHelpline": [
+    {
+      "Organization": "National Commission for Women (NCW) Helpline",
+      "Number": "1091 or 011-26942369"
+    },
+    {
+      "Organization": "Women Helpline (All India Women's Conference)",
+      "Number": "10921"
+    },
+    {
+      "Organization": "Sakhi One Stop Centre Helpline",
+      "Number": "181"
+    },
+    {
+      "Organization": "Beti Bachao, Beti Padhao Helpline",
+      "Number": "1800-111-777"
+    },
+    {
+      "Organization": "Women's Helpline (Mahila Helpline)",
+      "Number": "1090"
+    }
+  ],
+  "Survey": "However, almost 30% of women still hesitate to complain to the internal committee about such incidents. Moreover, more than half of the respondents surveyed would not or are not sure about continuing to work in the same place where the incident of sexual harassment occurred."
+}

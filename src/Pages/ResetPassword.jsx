@@ -7,7 +7,7 @@ import { Button, TextField } from "@mui/material";
 import emailjs from "emailjs-com";
 import { useNavigate } from "react-router-dom";
 import { config } from "../config";
-import '../animation.css'
+import "../animation.css";
 
 //Validation Schema
 let fieldValidationSchema = yup.object({
@@ -19,14 +19,13 @@ let fieldValidationSchema = yup.object({
 const ResetPassword = () => {
   let [value, setValue] = useState(false);
   return (
-    <div className="container-fluid flex items-center justify-center h-[100vh] w-[100vw] bg-transparent bg-cover" style={{backgroundImage:`url(https://shorturl.at/mpU59)`}}>
+    <div
+      className="container-fluid flex items-center justify-center h-[100vh] w-[100vw] bg-transparent bg-cover"
+      style={{ backgroundImage: `url(https://shorturl.at/mpU59)` }}
+    >
       <div className="row h-[100%]">
         <div className="col h-[100vh] w-[100vw] flex justify-center items-center">
-          {value === false ? (
-            <Email setValue={setValue} />
-          ) : (
-            <NewPassword />
-          )}
+          {value === false ? <Email setValue={setValue} /> : <NewPassword />}
         </div>
       </div>
     </div>
@@ -77,7 +76,11 @@ const Email = ({ setValue }) => {
       message_html: msg,
       app: "GaurdianSphere",
     };
-    await emailjs.send(config.emailjsServiceCode, config.emailjsTemplateCode, templateParams);
+    await emailjs.send(
+      config.emailjsServiceCode,
+      config.emailjsTemplateCode,
+      templateParams
+    );
     setEncrypt(msg);
   }
 
