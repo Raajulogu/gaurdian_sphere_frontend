@@ -7,22 +7,15 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SideBar from "./SideBar";
 import Footer from "./Footer";
 import NotificationMenu from "../container/NotificationMenu";
-import AccountMenu from "../container/AccountMenu";
+import { config } from "../config";
+import { useNavigate } from "react-router-dom";
 
 const Base = ({ children, Page }) => {
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const menuId = "primary-search-account-menu";
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
+  let navigate = useNavigate();
   //Side Bar Setup
   const [open, setOpen] = useState(false);
 
@@ -47,9 +40,13 @@ const Base = ({ children, Page }) => {
               color="inherit"
               aria-label="open drawer"
               sx={{ mr: 2 }}
-              onClick={() => setOpen(true)}
+              onClick={() => navigate("/")}
             >
-              <MenuIcon />
+              <img
+                src={config.logo_url}
+                alt="GaurdianSphere"
+                className="w-[55px] h-[40px]"
+              />
             </IconButton>
             <Typography
               variant="h6"
@@ -71,17 +68,15 @@ const Base = ({ children, Page }) => {
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
-
               <IconButton
                 size="large"
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
+                edge="start"
                 color="inherit"
+                aria-label="open drawer"
+                sx={{ ml: 1 }}
+                onClick={() => setOpen(true)}
               >
-                <AccountCircle />
+                <MenuIcon />
               </IconButton>
             </Box>
           </Toolbar>
@@ -89,9 +84,6 @@ const Base = ({ children, Page }) => {
 
         {/*Notification Menu Component*/}
         <NotificationMenu anchorEl={showNot} setAnchorEl={setShowNot} />
-
-        {/*Account Menu Component*/}
-        <AccountMenu anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
       </Box>
 
       {/*Body Content*/}

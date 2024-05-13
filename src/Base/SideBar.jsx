@@ -16,7 +16,9 @@ import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
 import GavelIcon from "@mui/icons-material/Gavel";
 import HelpIcon from "@mui/icons-material/Help";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
+import AccountCircle from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 const SideBar = ({ open, setOpen, Page }) => {
   let navigate = useNavigate();
@@ -31,12 +33,14 @@ const SideBar = ({ open, setOpen, Page }) => {
     { Name: "New Post", Icon: <PostAddIcon key={3} />, URL: "/" },
     { Name: "Your Posts", Icon: <CollectionsBookmarkIcon key={4} />, URL: "/" },
     { Name: "Laws", Icon: <GavelIcon key={5} />, URL: "/" },
-    { Name: "Help", Icon: <HelpIcon key={6} />, URL: "/" },
+    { Name: "My Account", Icon: <AccountCircle key={6} />, URL: "/" },
+    { Name: "Help", Icon: <HelpIcon key={7} />, URL: "/" },
+    { Name: "Logout", Icon: <LogoutIcon key={8} />, URL: "/" },
   ];
 
   return (
     <div>
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Drawer anchor={"right"} open={open} onClose={toggleDrawer(false)}>
         <Box
           sx={{ width: 250 }}
           role="presentation"
