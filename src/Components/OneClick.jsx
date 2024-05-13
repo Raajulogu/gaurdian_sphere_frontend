@@ -1,8 +1,9 @@
 import React from 'react'
+import Base from '../Base/Base'
 
 const OneClick = () => {
   return (
-    <div>OneClick</div>
+    <Base Page={"OneClick"}>OneClick</Base>
   )
 }
 

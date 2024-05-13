@@ -1,8 +1,9 @@
 import React from 'react'
+import Base from '../Base/Base'
 
 const FileCase = () => {
   return (
-    <div>FileCase</div>
+    <Base Page={"File a Case"}>FileCase</Base>
   )
 }
 

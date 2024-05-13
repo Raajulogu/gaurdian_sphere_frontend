@@ -1,8 +1,9 @@
 import React from 'react'
+import Base from '../Base/Base'
 
 const YourPost = () => {
   return (
-    <div>YourPost</div>
+    <Base Page={"Your Post"}>YourPost</Base>
   )
 }
 

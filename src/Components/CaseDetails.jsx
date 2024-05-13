@@ -1,8 +1,9 @@
 import React from 'react'
+import Base from '../Base/Base'
 
 const CaseDetails = () => {
   return (
-    <div>CaseDetails</div>
+    <Base Page={"Case Details"}>CaseDetails</Base>
   )
 }
 

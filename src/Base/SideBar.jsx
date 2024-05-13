@@ -22,29 +22,40 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 const SideBar = ({ open, setOpen, Page }) => {
   let navigate = useNavigate();
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
-  };
+
   // Side Bar data's
   const sideBarDetails = [
     { Name: "Home", Icon: <HomeIcon key={0} />, URL: "/" },
-    { Name: "Case Details", Icon: <FeedIcon key={1} />, URL: "/" },
-    { Name: "File a Case", Icon: <CreateNewFolderIcon key={2} />, URL: "/" },
-    { Name: "New Post", Icon: <PostAddIcon key={3} />, URL: "/" },
-    { Name: "Your Posts", Icon: <CollectionsBookmarkIcon key={4} />, URL: "/" },
-    { Name: "Laws", Icon: <GavelIcon key={5} />, URL: "/" },
-    { Name: "My Account", Icon: <AccountCircle key={6} />, URL: "/" },
-    { Name: "Help", Icon: <HelpIcon key={7} />, URL: "/" },
-    { Name: "Logout", Icon: <LogoutIcon key={8} />, URL: "/" },
+    { Name: "Case Details", Icon: <FeedIcon key={1} />, URL: "/case-details" },
+    {
+      Name: "File a Case",
+      Icon: <CreateNewFolderIcon key={2} />,
+      URL: "/file-case",
+    },
+    { Name: "New Post", Icon: <PostAddIcon key={3} />, URL: "/new-post" },
+    {
+      Name: "Your Post",
+      Icon: <CollectionsBookmarkIcon key={4} />,
+      URL: "/your-post",
+    },
+    { Name: "Laws", Icon: <GavelIcon key={5} />, URL: "/laws" },
+    { Name: "My Account", Icon: <AccountCircle key={6} />, URL: "/account" },
+    { Name: "Help", Icon: <HelpIcon key={7} />, URL: "/help" },
   ];
+
+  //Logout Function
+  function logout() {
+    localStorage.removeItem("token");
+    navigate("/login");
+  }
 
   return (
     <div>
-      <Drawer anchor={"right"} open={open} onClose={toggleDrawer(false)}>
+      <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
         <Box
           sx={{ width: 250 }}
           role="presentation"
-          onClick={toggleDrawer(false)}
+          onClick={() => setOpen(false)}
         >
           <List>
             <ListItem
@@ -53,7 +64,7 @@ const SideBar = ({ open, setOpen, Page }) => {
                 backgroundColor: Page === "OneClick" ? "primary.light" : "",
               }}
             >
-              <ListItemButton>
+              <ListItemButton onClick={() => navigate("/oneclick")}>
                 <ListItemIcon>
                   <PowerSettingsNewIcon />
                 </ListItemIcon>
@@ -75,6 +86,14 @@ const SideBar = ({ open, setOpen, Page }) => {
                 </ListItemButton>
               </ListItem>
             ))}
+            <ListItem disablePadding>
+              <ListItemButton onClick={logout}>
+                <ListItemIcon>
+                  <LogoutIcon />
+                </ListItemIcon>
+                <ListItemText primary="Logout" />
+              </ListItemButton>
+            </ListItem>
           </List>
         </Box>
       </Drawer>
