@@ -28,12 +28,29 @@ async function updateUser(user, token) {
   try {
     let response = await axios.put(
       `${config.backendurl}/auth/update-user-data`,
+      user,
       {
         headers: {
           "x-auth": token,
         },
-      },
-      user
+      }
+    );
+    return response.data;
+  } catch (error) {
+    return false;
+  }
+}
+
+//Update User Account
+async function updateUserNotification(token) {
+  try {
+    let response = await axios.put(
+      `${config.backendurl}/auth/update-user-notification`,
+      {
+        headers: {
+          "x-auth": token,
+        },
+      }
     );
     return response.data;
   } catch (error) {
@@ -72,26 +89,8 @@ async function deleteUser(token) {
 //Upload New Post
 async function uploadPost(data, token) {
   try {
-    let response = await axios.post(
-      `${config.backendurl}/post/newpost`,
-      {
-        headers: {
-          "x-auth": token,
-        },
-      },
-      data
-    );
-
-    return response.data;
-  } catch (error) {
-    return false;
-  }
-}
-
-//Add Views to the Post
-async function addViews(id, token) {
-  try {
-    let response = await axios.put(`${config.backendurl}/post/addviews/${id}`, {
+    console.log(token, "token");
+    let response = await axios.post(`${config.backendurl}/post/newpost`, data, {
       headers: {
         "x-auth": token,
       },
@@ -103,8 +102,27 @@ async function addViews(id, token) {
   }
 }
 
+//Add Views to the Post
+async function addViews(id, token) {
+  try {
+    let response = await axios.put(
+      `${config.backendurl}/post/addviews/${id}`,
+      {},
+      {
+        headers: {
+          "x-auth": token,
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    return false;
+  }
+}
+
 //Get All Post
-async function getAllPost(id, token) {
+async function getAllPost(token) {
   try {
     let response = await axios.get(`${config.backendurl}/post/get-post`, {
       headers: {
@@ -118,17 +136,32 @@ async function getAllPost(id, token) {
   }
 }
 
+//Get All Post
+async function getUserPost(token) {
+  try {
+    let response = await axios.get(`${config.backendurl}/post/get-user-post`, {
+      headers: {
+        "x-auth": token,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    return false;
+  }
+}
+
 //Edit Post
-async function editPost(data, token) {
+async function editPost(id, data, token) {
   try {
     let response = await axios.put(
-      `${config.backendurl}/post/edit-post`,
+      `${config.backendurl}/post/edit-post/${id}`,
+      data,
       {
         headers: {
           "x-auth": token,
         },
-      },
-      data
+      }
     );
 
     return response.data;
@@ -160,12 +193,12 @@ async function fileCase(data, token) {
   try {
     let response = await axios.post(
       `${config.backendurl}/case/file-case`,
+      data,
       {
         headers: {
           "x-auth": token,
         },
-      },
-      data
+      }
     );
 
     return response.data;
@@ -183,6 +216,21 @@ async function getUserCase(token) {
       },
     });
 
+    return response.data;
+  } catch (error) {
+    return false;
+  }
+}
+
+//Get User Case
+async function getCaseById({ token, id }) {
+  try {
+    let response = await axios.get(`${config.backendurl}/case/get-case-byid`, {
+      headers: {
+        "x-auth": token,
+        id: id,
+      },
+    });
     return response.data;
   } catch (error) {
     return false;
@@ -209,12 +257,12 @@ async function editCase(data, token) {
   try {
     let response = await axios.put(
       `${config.backendurl}/case/edit-case`,
+      data,
       {
         headers: {
           "x-auth": token,
         },
-      },
-      data
+      }
     );
 
     return response.data;
@@ -228,12 +276,12 @@ async function updateCase(data, token) {
   try {
     let response = await axios.put(
       `${config.backendurl}/case/update-case`,
+      data,
       {
         headers: {
           "x-auth": token,
         },
-      },
-      data
+      }
     );
 
     return response.data;
@@ -247,13 +295,13 @@ async function closeCase(id, token) {
   try {
     let response = await axios.put(
       `${config.backendurl}/case/close-case/${id}`,
+      {},
       {
         headers: {
           "x-auth": token,
         },
       }
     );
-
     return response.data;
   } catch (error) {
     return false;
@@ -271,7 +319,6 @@ async function deleteCase(id, token) {
         },
       }
     );
-
     return response.data;
   } catch (error) {
     return false;
@@ -296,4 +343,7 @@ export {
   updateCase,
   closeCase,
   deleteCase,
+  updateUserNotification,
+  getCaseById,
+  getUserPost,
 };

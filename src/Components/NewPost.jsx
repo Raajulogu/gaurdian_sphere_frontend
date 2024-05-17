@@ -62,10 +62,11 @@ const NewPost = () => {
     setLoading(true);
     if (!image) {
       alert("Please upload a image");
+      setLoading(false);
       return false;
     }
     post["image"] = image;
-    await uploadPost({ post, token });
+    await uploadPost(post, token);
     setLoading(false);
     navigate("/your-post");
   }
@@ -106,6 +107,8 @@ const NewPost = () => {
           )}
           <br />
           <TextField
+            multiline
+            rows={4}
             name="details"
             type="details"
             label="Details"

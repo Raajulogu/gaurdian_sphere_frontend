@@ -66,6 +66,8 @@ const FileCase = () => {
           )}
           <br />
           <TextField
+            multiline
+            rows={4}
             name="details"
             type="details"
             label="Details"

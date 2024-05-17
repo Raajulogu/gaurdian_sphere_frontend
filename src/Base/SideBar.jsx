@@ -20,11 +20,11 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-const SideBar = ({ open, setOpen, Page }) => {
+const SideBar = ({ open, setOpen, Page, isAdmin }) => {
   let navigate = useNavigate();
 
-  // Side Bar data's
-  const sideBarDetails = [
+  // User Side Bar data's
+  const userSideBarDetails = [
     { Name: "Home", Icon: <HomeIcon key={0} />, URL: "/" },
     { Name: "Case Details", Icon: <FeedIcon key={1} />, URL: "/case-details" },
     {
@@ -43,6 +43,14 @@ const SideBar = ({ open, setOpen, Page }) => {
     { Name: "Help", Icon: <HelpIcon key={7} />, URL: "/help" },
   ];
 
+  // Admin Side Bar data's
+  // eslint-disable-next-line no-unused-vars
+  const adminSideBarDetails = [
+    { Name: "Home", Icon: <HomeIcon key={0} />, URL: "/" },
+    { Name: "Cases", Icon: <FeedIcon key={1} />, URL: "/all-cases" },
+    { Name: "My Account", Icon: <AccountCircle key={2} />, URL: "/account" },
+  ];
+
   //Logout Function
   function logout() {
     localStorage.removeItem("token");
@@ -58,34 +66,53 @@ const SideBar = ({ open, setOpen, Page }) => {
           onClick={() => setOpen(false)}
         >
           <List>
-            <ListItem
-              disablePadding
-              sx={{
-                backgroundColor: Page === "OneClick" ? "primary.light" : "",
-              }}
-            >
-              <ListItemButton onClick={() => navigate("/oneclick")}>
-                <ListItemIcon>
-                  <PowerSettingsNewIcon />
-                </ListItemIcon>
-                <ListItemText primary="OneClick" />
-              </ListItemButton>
-            </ListItem>
-            <Divider />
-            {sideBarDetails.map((val, index) => (
-              <ListItem
-                key={index}
-                disablePadding
-                sx={{
-                  backgroundColor: Page === val.Name ? "primary.light" : "",
-                }}
-              >
-                <ListItemButton onClick={() => navigate(`${val.URL}`)}>
-                  <ListItemIcon>{val.Icon}</ListItemIcon>
-                  <ListItemText primary={val.Name} />
-                </ListItemButton>
-              </ListItem>
-            ))}
+            {!isAdmin && (
+              <>
+                <ListItem
+                  disablePadding
+                  sx={{
+                    backgroundColor: Page === "OneClick" ? "primary.light" : "",
+                  }}
+                >
+                  <ListItemButton onClick={() => navigate("/oneclick")}>
+                    <ListItemIcon>
+                      <PowerSettingsNewIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="OneClick" />
+                  </ListItemButton>
+                </ListItem>
+                <Divider />
+              </>
+            )}
+            {isAdmin
+              ? adminSideBarDetails.map((val, index) => (
+                  <ListItem
+                    key={index}
+                    disablePadding
+                    sx={{
+                      backgroundColor: Page === val.Name ? "primary.light" : "",
+                    }}
+                  >
+                    <ListItemButton onClick={() => navigate(`${val.URL}`)}>
+                      <ListItemIcon>{val.Icon}</ListItemIcon>
+                      <ListItemText primary={val.Name} />
+                    </ListItemButton>
+                  </ListItem>
+                ))
+              : userSideBarDetails.map((val, index) => (
+                  <ListItem
+                    key={index}
+                    disablePadding
+                    sx={{
+                      backgroundColor: Page === val.Name ? "primary.light" : "",
+                    }}
+                  >
+                    <ListItemButton onClick={() => navigate(`${val.URL}`)}>
+                      <ListItemIcon>{val.Icon}</ListItemIcon>
+                      <ListItemText primary={val.Name} />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
             <ListItem disablePadding>
               <ListItemButton onClick={logout}>
                 <ListItemIcon>

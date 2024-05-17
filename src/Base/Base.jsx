@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,8 +13,11 @@ import Footer from "./Footer";
 import NotificationMenu from "../container/NotificationMenu";
 import { config } from "../config";
 import { useNavigate } from "react-router-dom";
+import { fetchData } from "../container/services";
 
 const Base = ({ children, Page }) => {
+  let token=localStorage.getItem("token");
+  let [isAdmin,setIsAdmin]=useState("")
   let navigate = useNavigate();
   //Side Bar Setup
   const [open, setOpen] = useState(false);
@@ -25,10 +28,20 @@ const Base = ({ children, Page }) => {
     setShowNot(event.currentTarget);
   };
 
+  useEffect(()=>{
+    async function getUserAccount(){
+      let user=await fetchData(token);
+      setIsAdmin(!user.isAdmin);
+    }
+    getUserAccount()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
+
+
   return (
     <div>
       {/*Side Bar Component*/}
-      <SideBar open={open} setOpen={setOpen} Page={Page} />
+      <SideBar open={open} setOpen={setOpen} Page={Page} isAdmin={isAdmin}/>
 
       {/*Nav Bar Component*/}
       <Box sx={{ flexGrow: 1 }}>
