@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 export const config = {
-  backendurl: "http://localhost:4040/api",
+  backendurl: process.env.REACT_APP_backend_URL,
   logo_url: process.env.REACT_APP_logo,
   emailjsCode: process.env.REACT_APP_emailjscode,
   emailjsServiceCode: process.env.REACT_APP_emailjsServiceCode,

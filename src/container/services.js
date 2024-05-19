@@ -67,8 +67,8 @@ async function fetchData(token) {
       },
     });
     return response.data;
-  } catch {
-    alert("Invalid Credentials");
+  } catch(error) {
+    console.log(error);
   }
 }
 
