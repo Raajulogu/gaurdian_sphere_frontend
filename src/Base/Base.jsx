@@ -31,7 +31,7 @@ const Base = ({ children, Page }) => {
   useEffect(()=>{
     async function getUserAccount(){
       let user=await fetchData(token);
-      setIsAdmin(!user.isAdmin);
+      setIsAdmin(user.isAdmin);
     }
     getUserAccount()
   // eslint-disable-next-line react-hooks/exhaustive-deps
